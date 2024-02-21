@@ -1,92 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
-    <meta name="generator" content="Hugo 0.84.0" />
-    <title>Signin Template · Bootstrap v5.0</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign-Up</title>
 
-    <link
-      rel="canonical"
-      href="https://getbootstrap.com/docs/5.0/examples/sign-in/"
-    />
-    <link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="custom css/signin.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="text-center">
+<main class="form-signin">
+  <form id="client-form">
+    <img class="mb-1" src="./assets/png/workwave-favicon-black.png" alt="" width="72" height="77">
+    <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
 
-    <link href="./custom css/signin.css" rel="stylesheet" />
+    <div class="form-floating">
+      <input type="text" pattern="[a-zA-Z]+ [a-zA-Z]+" title="Please write your full name" class="form-control client" id="fullName" placeholder="Full Name" required>
+      <label for="fullName" class="client">Full Name</label>
+    </div>
 
-  </head>
-  <body class="text-center">
-    <main class="form-signin">
-      <form>
-        <img
-          class="mb-1"
-          src="./assets/png/workwave-favicon-black.png"
-          alt=""
-          width="72"
-          height="77"
-        />
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+      <label for="email">Email address</label>
+    </div>
 
-        <div class="form-floating">
-          <input
-            type="fullName"
-            pattern="[a-zA-Z]+ [a-zA-Z]+"
-            title="Please write your full name"
-            class="form-control"
-            id="floatingInput"
-            placeholder="name@example.com"
-          />
-          <label for="floatingInput" >Full Name</label>
-        </div>
+    <div class="form-floating">
+      <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone number" required>
+      <label for="phoneNumber">Phone number</label>
+    </div>
 
-        <div class="form-floating">
-          <input
-            type="email"
-            class="form-control"
-            id="floatingInput"
-            placeholder="name@example.com"
-          />
-          <label for="floatingInput">Email address</label>
-        </div>
+    <div class="form-floating">
+      <select name="Job"  class="form-control" id="" required>
+        <option value="" selected disabled>Select a profession</option>
+        <option value="student">Student</option>
+        <option value="engineer">Engineer</option>
+        <option value="doctor">Doctor</option>
+        <option value="teacher">Teacher</option>
+      </select>
+      <label for="phoneNumber">Job Title</label>
+    </div>
 
-        <div class="form-floating">
-          <input
-            type="password"
-            class="form-control"
-            id="floatingInput"
-            placeholder="password"
-          />
-          <label for="floatingInput">Password</label>
-        </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="specific-info" placeholder="Phone number">
+      <label for="specific-info">Specific Information</label>
+    </div>
 
-        <div class="form-floating">
-          <input
-            type="password"
-            class="form-control"
-            id="floatingInput"
-            placeholder="confirmPassword"
-          />
-          <label for="floatingInput">Confirm Password</label>
-        </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="password" placeholder="Password" required>
+      <label for="password">Password</label>
+    </div>
 
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me" /> Remember me
-          </label>
-        </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">
-          Sign in
-        </button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-      </form>
-    </main>
-  </body>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+      <label for="confirmPassword">Confirm Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <button class="btn btn-sm btn-outline-secondary" id="HR-toggle">HR</button>
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+    <p style="margin-top: 10px;">already have an account? <a href="/signin-page.html">sign-in</a></p>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+
+
+  <form id="HR-form" style="display: none;">
+    <img class="mb-1" src="./assets/png/workwave-favicon-black.png" alt="" width="72" height="77">
+    <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="enterpriseName" placeholder="Enterprise Name" required>
+      <label for="enterpriseName" >Enterprise Name</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+      <label for="email">Email address</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone number" required>
+      <label for="phoneNumber">Phone number</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="password" class="form-control" id="password" placeholder="Password" required>
+      <label for="password">Password</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+      <label for="confirmPassword">Confirm Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <button class="btn btn-sm btn-outline-secondary" id="client-toggle">Client</button>
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+    <p style="margin-top: 10px;">already have an account? <a href="/signin-page.html">sign-in</a></p>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+</main>
+<script src="custom js/sign.js"></script>
+</body>
 </html>
