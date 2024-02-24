@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+  }
+
+  body {
+    height: 100vh;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-size: cover;
+    
+      overflow: hidden;
+  
+
+  }
+
+  li {
+    list-style:none;
+
+  }
+  a {
+    text-decoration: none;
+    color:blanchedalmond;
+    font-size: 1rem;
+
+  }
+
+  .nav-link:hover {
+    color: olive;
+
+  }
+
+  header {
+    position: relative;
+    padding: 0 2rem;
+
+
+  }
+
+  .navbar {
+    width: 100%;
+    height: 60px ;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .navbar.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+.navbar .links{
+    display: flex ;
+    gap: 2rem;
+}
+
+.navbar .togle-btn{
+    color: blanchedalmond;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+
+}
+ 
+.action-btn{
+    background-color:black;
+    color: aliceblue;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action-btn :hover{
+    scale: 1.05;
+    color:olive;
+}
+.action-btn :active{
+    scale: 0.95;
+
+}
+
+
+
+.image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 32, 32, 0.7); 
+  mix-blend-mode: multiply; 
+}
+
+.text-frame {
+    position: absolute;
+    top: 50px; 
+    padding: 0;
+    margin:10%;
+}
+
+.text-frame p {
+    margin: 100px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(252, 190, 75);
+    font-size:x-large;
+    text-align: center;
+}
+
+em {
+  color:  wheat;
+}
