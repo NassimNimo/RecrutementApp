@@ -32,6 +32,10 @@
           </div>
         </div>
         <div class="form-group p-1">
+          <label for="city">City</label>
+          <input type="text" class="form-control" name="city" id="city" placeholder="City" required>
+        </div>
+        <div class="form-group p-1">
           <label for="job">Job title</label>
           <select name="job" id="job" class="form-control" required>
             <option value="" disabled selected>Choose your job</option>
@@ -77,6 +81,9 @@
           <label for="cv">Your CV</label>
           <input type="file" class="form-control" name="cv" id="cv" placeholder="cv" required>
           <small id="CVHelp" class="form-text text-muted">You can modify it later.</small>
+          <div class="alert alert-info" role="alert">
+            Make sure to give each section in the CV a title and follow the standard format in <a href="#" class="alert-link">the documentation</a> so the CV can be processed.
+          </div>
         </div>
         <div class="row p-4 mx-auto ">
           <button type="submit" class="btn btn-primary col-4 mx-auto">Register</button>
@@ -123,6 +130,10 @@
             ?>
           </select>
           <small id="industryHelp" class="form-text text-muted">select your industry.</small>
+        </div>
+        <div class="form-group p-1">
+          <label for="city">City</label>
+          <input type="text" class="form-control" name="city" id="city" placeholder="City" required>
         </div>
         <label for="name">HR manager's name</label>
         <div class="row p-1">

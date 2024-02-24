@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     $nom = $_POST["firstName"];
     $prenom = $_POST["lastName"];
+    $ville= $_POST["city"];
     $profession = $_POST["job"];
     $email = $_POST["email"];
     $telephone = $_POST["tel"];
@@ -31,10 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insert user data including CV file reference
     $hash = password_hash($password, PASSWORD_BCRYPT);
-    $sql2 = "INSERT INTO client_users (username, password, nom, prenom, profession, email, telephone, CV)
+    $sql2 = "INSERT INTO client_users (username, password, nom, prenom, ville, profession, email, telephone, CV)
              VALUES (?, ?, ?, ?, ?, ?, ?, LAST_INSERT_ID())";
     $stmt2 = $conn->prepare($sql2);
-    $stmt2->bind_param("sssssss", $username, $hash, $nom, $prenom, $profession, $email, $telephone);
+    $stmt2->bind_param("sssssss", $username, $hash, $nom, $prenom, $ville, $profession, $email, $telephone);
     if ($stmt2->execute()) {
         echo "New record inserted successfully";
     } else {
